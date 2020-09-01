@@ -1,0 +1,10 @@
+.Nav a{
+  color: blue;
+  margin: 10px;
+}
+.Nav a.visited{
+  color: blue;
+}
+.Nav a.active{
+  color: black;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import "./DogList.css"
 
 /**Accepts the props : dogs
  * 
@@ -12,14 +13,20 @@ function DogList(props) {
   const { dogs } = props
 
   function getDogsList() {
-    return (<ul>
+    return (<>
       {dogs.map(dog =>
-        <li>
-          <Link key={dog.id} to={`/dogs/${dog.name}`}>{dog.name}</Link><br></br>
+        <div>
+          <div className="DogList-name">
+            <Link 
+              key={dog.id} 
+              to={`/dogs/${dog.name}`}>
+                {dog.name}
+            </Link>
+          </div>
           <img src={dog.src}></img>
-        </li>
+        </div>
       )}
-    </ul>)
+    </>)
   }
 
   return (

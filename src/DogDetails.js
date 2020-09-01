@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
+import "./DogDetails.css"
 
 
 /**Accepts the props : dogs
@@ -28,7 +29,7 @@ function DogDetails(props) {
 
   return (
     <div className="DogDetails">
-      <div>Name : {dog.name}</div>
+      <div className="DogDetails-name">Name : {dog.name}</div>
       <img src={dog.src}></img>
       <div> Age : {dog.age}</div>
       <ul> Facts :

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import "./Nav.css"
 
 /** Accepts the props : dogs
  * 
@@ -16,11 +17,9 @@ function Nav(props) {
     </>)
   }
   return (
-    <div>
-      <div>
+    <div className="Nav">
         <Link to="/dogs">Home</Link>
         {getNavLinkForAllDogs()}
-      </div>
     </div>
   )
 }
