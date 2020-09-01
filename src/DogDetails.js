@@ -14,9 +14,7 @@ function DogDetails(props) {
   const { dogs } = props
   const { name } = useParams();
 
-  //use .find
-  let dog = dogs.filter(dog => dog.name === name)[0]
-
+  let dog = dogs.find(dog => dog.name === name)
 
   function getFacts() {
     return (
